@@ -1,4 +1,4 @@
-<div class="box box-default">
+<!-- <div class="box box-default">
     <div class="box-header with-border">
         <h3 class="box-title">Dependencies</h3>
 
@@ -7,10 +7,10 @@
             </button>
             <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
         </div>
-    </div>
+    </div> -->
 
     <!-- /.box-header -->
-    <div class="box-body dependencies">
+ <!--    <div class="box-body dependencies">
         <div class="table-responsive">
             <table class="table table-striped">
                 @foreach($dependencies as $dependency => $version)
@@ -20,8 +20,8 @@
                 </tr>
                 @endforeach
             </table>
-        </div>
+        </div> -->
         <!-- /.table-responsive -->
-    </div>
+    <!-- </div> -->
     <!-- /.box-body -->
-</div>
+<!-- </div> -->

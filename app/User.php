@@ -16,9 +16,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'residence','sex','region','question','approved'
     ];
 
+    // public function setSexAttribute($value)
+    // {
+    //     $this->attributes['sex'] = ($value) ? 'male': 'female';
+    // }
     /**
      * The attributes that should be hidden for arrays.
      *

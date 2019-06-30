@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
@@ -61,10 +62,14 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .container {
+                margin-top: 50px;
+                /*border: 2px solid black;*/
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <!-- <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -94,6 +99,60 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <h2 style="text-align: center; margin-top: 50px"> Ghana Tech Lab, Application Form</h2>
+    <div class="container">
+        <div class="card">
+            <div class="row">
+            <div class="col-md-4">
+                
+            </div>
+            <div class="col-md-4">
+                <form method="post" action="/ai/hubs">
+                    @csrf
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="residence">Residence</label>
+                        <input type="text" name="residence" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <select name="region" class="form-control">
+                            <option value="Greater Accra">Greater Accra</option>
+                            <option value="Ashanti Region">Ashanti Region</option>
+                            <option value="Central Region">Central Region</option>
+                        </select>
+                     </div>
+                    <div class="radio">
+                        Sex<br /><label class="radio-inline"><input type="radio" name="sex" value="male">Male</label>
+                        <label class="radio-inline"><input type="radio" name="sex" value="female">Female</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="question">Are you a student?</label>
+                        <select name="question" class="form-control">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <input type="submit" value="submit" class="btn btn-primary btn-block">
+                </form>
+            </div>
+             <div class="col-md-4"></div>
+             </div>
+     </div>
+ </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>

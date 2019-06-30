@@ -1,4 +1,4 @@
-<div class="box box-default">
+<!-- <div class="box box-default">
     <div class="box-header with-border">
         <h3 class="box-title">Environment</h3>
 
@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    <!-- /.box-header -->
+    /.box-header
     <div class="box-body">
         <div class="table-responsive">
             <table class="table table-striped">
@@ -21,8 +21,8 @@
                 </tr>
                 @endforeach
             </table>
-        </div>
-        <!-- /.table-responsive -->
+        </div> -->
+        <!-- /.table-responsive
     </div>
     <!-- /.box-body -->
-</div>
+<!-- </div>  -->
