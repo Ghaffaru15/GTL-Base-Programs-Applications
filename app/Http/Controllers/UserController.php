@@ -21,7 +21,7 @@ class UserController extends Controller
     	// Storage::put('/hubs/logos/'. $user->id . 'png',$request->file('logo'));
 
     	// dd($request->all());
-    	session()->flash('message','Thanks for applying');
+    	session()->flash('message','Thank you for applying');
     	return redirect('/');
     }
 }

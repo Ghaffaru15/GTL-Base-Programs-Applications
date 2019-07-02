@@ -150,16 +150,31 @@
        <!--  <h1 style="text-align: center; margin-top: 50px"> Ghana Tech Lab, Apply to be a hub for the AI Program</h1><hr> -->
     <div class="container">
         <!-- <div class="card"> -->
+                      <div class="row">
+          <div class="col-md-3">  
+              <img src="/images/Ghanatechlab.jpg" width="100px" height="100px"><hr>
+          </div>
+          <div class="col-md-6">
+              <h2 style="text-align: center; margin-top: 50px; font-weight: 600"> Apply as a Training Partner for the AI Program</h2>
+            </div>
+            <div class="col-md-3"></div>
+          </div>  
             <div class="row">
             <div class="col-md-3">
                 
             </div>
           <!--   <div class="main"> -->
             <div class="col-md-6 actual_form">
+        
                 <form method="post" action="/ai/hubs" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group">
+                        @if (session('message'))
+                            <div class="alert alert-success">
+                                {{ session('message') }}
+                            </div>
+                        @endif
                         <label for="name-of-hub">Name of Hub</label><br />
                         <input type="text" name="hub_name" class="form-control" value="{{old('hub_name')}}" />
                         @if ($errors->has('hub_name'))

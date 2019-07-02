@@ -15,7 +15,7 @@ class CurriculumDevsController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\CurriculumDev';
+    protected $title = 'Curriculum Developers';
 
     /**
      * Make a grid builder.
@@ -25,7 +25,8 @@ class CurriculumDevsController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new CurriculumDev);
-
+        $grid->column('name',__('Name of Organisation/Consultant'));
+        $grid->column('email',__('Email address'));
 
 
         return $grid;
@@ -39,9 +40,18 @@ class CurriculumDevsController extends AdminController
      */
     protected function detail($id)
     {
+        $user = CurriculumDev::findOrFail($id);
         $show = new Show(CurriculumDev::findOrFail($id));
 
+        $show->field('name', 'Name of Organisation/Consultant');
+        $show->field('email', 'Email address');
+        $show->field('phone_number', 'Phone number');
+        $show->proposals('Proposal')->as(function ($proposals) use ($id,$user) {
+            // $html = asset('images/Ghanatechlab.jpg');
+                $html = asset('storage/curriculum/proposals/' . $id . '.' . $user->proposal);
+            return $html;
 
+        })->file('proposal');
 
         return $show;
     }
@@ -55,7 +65,9 @@ class CurriculumDevsController extends AdminController
     {
         $form = new Form(new CurriculumDev);
 
-
+        $form->text('name', __('Name of organisation/consultant'));
+        $form->text('email', __('Email address'));
+        $form->text('phone_number', __('Phone number'));
 
         return $form;
     }
