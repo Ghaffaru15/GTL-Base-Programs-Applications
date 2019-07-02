@@ -12,6 +12,6 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('admin.home');
     $router->resource('/ai/hubs', UserController::class);
-
+    $router->resource('/ai/cur', CurriculumDevsController::class);
 
 });

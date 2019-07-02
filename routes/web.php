@@ -16,3 +16,9 @@ Route::get('/', function () {
 });
 
 Route::post('/ai/hubs','UserController@store');
+
+Route::get('/cur-devs',function(){
+	return view('cur-devs');
+});
+
+Route::post('/ai/cur','CurriculumDevsController@store');

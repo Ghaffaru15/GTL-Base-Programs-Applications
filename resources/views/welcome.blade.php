@@ -4,32 +4,38 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Ghana Tech Lab Trianing Partners application</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
 
         <!-- Styles -->
         <style>
             /*.whole {
                 background-image: url('images/last cover 2.png');
             }*/
-            label {
+         /*   label {
                 font-weight: bolder;
-            }
+            }*/
+
             html, body {
                 /*background-color: orange;*/
                 background-image: url('images/New des.png');
+                font-family: 'Source Sans Pro', sans-serif !important;
 
                 /*background-repeat: no-repeat;*/
                 /*opacity: 0.8;*/
                 /*color: #636b6f;*/
-                font-family: 'Nunito', sans-serif;
-                font-weight: 600;
+                /*font-family: 'Nunito', sans-serif;*/
+                /*font-weight: 400;*/
                 height: 100vh;
                 margin: 0;
-                color: white;
+                color: black;
+
             }
 
             .row {
@@ -86,6 +92,7 @@
             .container {
                 margin-top: 50px;
                 /*border: 2px solid black;*/
+
             }
 
             .error {
@@ -93,7 +100,17 @@
             }
 
             .actual_form {
-                /*background-color: orange;*/
+                background-color: white;
+                box-shadow: 2px 4px 0 4px rgba(0,0,0,0.1);
+                padding: 48px;
+                z-index: 2;
+                border-radius: 8px;
+            }
+
+
+            .main {
+                /*width: 90%;*/
+
             }
         </style>
     </head>
@@ -137,6 +154,7 @@
             <div class="col-md-3">
                 
             </div>
+          <!--   <div class="main"> -->
             <div class="col-md-6 actual_form">
                 <form method="post" action="/ai/hubs" enctype="multipart/form-data">
                     @csrf
@@ -240,9 +258,10 @@
                         <label class="radio-inline"><input type="radio" name="business_lead" value="No">No</label>
                     </div>
                   
-                    <input type="submit" value="submit" class="btn btn-primary btn-block">
+                    <input type="submit" value="submit" class="btn btn-primary btn-block" style="margin-bottom: 30px;">
                 </form>
-            </div>
+            <!-- </div> -->
+        </div>
              <div class="col-md-3"></div>
              </div>
      <!-- </div> -->
