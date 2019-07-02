@@ -27,6 +27,7 @@
 
 <div class="title">
     Ghana Tech Lab
+    <img src="images/Ghanatechlab.jpg">
 </div>
 <!-- <div class="links">
     <a href="https://github.com/z-song/laravel-admin" target="_blank">Github</a>

@@ -16,7 +16,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'residence','sex','region','question','approved'
+        'hub_name','application_registered','project_lead_name','project_lead_phone_number',
+        'project_lead_email','logo','training_room','laptops','committed','incubation','internship_provision','internship_places','provide_trainers','reports','business_lead'
     ];
 
     // public function setSexAttribute($value)

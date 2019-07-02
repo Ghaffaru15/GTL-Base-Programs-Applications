@@ -4,16 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Http\Requests\HubApplicationRequest;
 
 class UserController extends Controller
 {
     //
 
-    public function store()
+    public function store(HubApplicationRequest $request)
     {
     	
-    	User::create(request()->all());
+    	$user = User::create($request->all());
     	# code...
+    	$file = $request->file('logo');
+    	// $ext = 
+    	$file->storeAs('hubs/logos', $user->id . '.png');
+    	// Storage::put('/hubs/logos/'. $user->id . 'png',$request->file('logo'));
     	return redirect()->back();
     }
 }

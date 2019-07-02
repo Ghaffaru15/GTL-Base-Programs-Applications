@@ -18,7 +18,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Default Cloud Filesystem Disk
-    |--------------------------------------------------------------------------
+    
     |
     | Many applications store files both locally and in the cloud. For this
     | reason, you may specify a default "cloud" driver here. This driver
@@ -45,7 +45,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => storage_path('app/public'),
         ],
 
         'public' => [
@@ -66,6 +66,10 @@ return [
         'admin' => [
             'driver' => 'local',
             'root' => storage_path('app'),
+             'visibility' => 'public',
+            'url' => env('APP_URL').'/hubs/logos'
+             // 'visibility' => 'public',
+            // 'url' => env('APP_URL').'/uploads'
         ],
 
     ],
