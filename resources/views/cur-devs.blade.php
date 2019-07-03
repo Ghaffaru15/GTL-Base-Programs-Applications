@@ -150,15 +150,15 @@
              
                                 <!-- <h4>Tell us who you are:</h4> -->
                                 <div class="form-group">
-                                    <label for="f1-first-name">Name of organisation/consultant</label>
-                                    <input type="text" name="name" class="f1-first-name form-control" id="f1-first-name">
+                                    <label for="f1-first-name">Name of Organisation/Consultant</label>
+                                    <input type="text" name="name" class="f1-first-name form-control" id="f1-first-name" required>
                                     @if ($errors->has('name'))
                                         <p class="error"> {{ $errors->first('name') }}</p>
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <label for="f1-email">Email address</label>
-                                    <input type="email" name="email" class="form-control" />
+                                    <label for="f1-email">Email Address</label>
+                                    <input type="email" name="email" class="form-control" required />
                                      @if ($errors->has('email'))
                                         <p class="error"> {{ $errors->first('email') }}</p>
                                     @endif
@@ -166,14 +166,14 @@
 
                                  <div class="form-group">
                                     <label for="f1-phone_number">Phone Number</label>
-                                    <input type="number" class="form-control" name="phone_number" /> 
+                                    <input type="number" class="form-control" name="phone_number" required /> 
                                      @if ($errors->has('phone_number'))
                                         <p class="error"> {{ $errors->first('phone_number') }}</p>
                                     @endif
                                  </div>
                                  <div class="form-group">
                                     <label for="f1-proposal"> Upload Proposal</label>
-                                    <input type="file" class="form-control" name="proposal" />
+                                    <input type="file" class="form-control" name="proposal" required />
                                      @if ($errors->has('proposal'))
                                         <p class="error"> {{ $errors->first('proposal') }}</p>
                                     @endif

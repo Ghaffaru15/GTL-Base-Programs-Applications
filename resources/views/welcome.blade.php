@@ -176,7 +176,7 @@
                             </div>
                         @endif
                         <label for="name-of-hub">Name of Hub</label><br />
-                        <input type="text" name="hub_name" class="form-control" value="{{old('hub_name')}}" />
+                        <input type="text" name="hub_name" class="form-control" value="{{old('hub_name')}}" required />
                         @if ($errors->has('hub_name'))
                                 <p class="error">{{ $errors->first('hub_name') }}</p>
                         @endif
@@ -191,7 +191,7 @@
 
                     <div class="form-group">
                         <label for="name-of-project-lead">Name of project lead</label><br />
-                        <input type="text" name="project_lead_name" class="form-control" value="{{old('project_lead_name')}}">
+                        <input type="text" name="project_lead_name" class="form-control" value="{{old('project_lead_name')}}" required>
                           @if ($errors->has('project_lead_name'))
                                 <p class="error">{{ $errors->first('project_lead_name') }}</p>
                         @endif
@@ -199,7 +199,7 @@
 
                     <div class="form-group">
                         <label for="phone-number">Telephone Number of the project lead</label><br />
-                        <input type="number" name="project_lead_phone_number" class="form-control" value="{{old('project_lead_phone_number')}}"  />
+                        <input type="number" name="project_lead_phone_number" class="form-control" value="{{old('project_lead_phone_number')}}" required />
                           @if ($errors->has('project_lead_phone_number'))
                                 <p class="error">{{ $errors->first('project_lead_phone_number') }}</p>
                         @endif
@@ -207,7 +207,7 @@
 
                     <div class="form-group">
                         <label for="email">Email address of the Project Lead</label><br />
-                        <input type="email" name="project_lead_email" class="form-control" value="{{old('project_lead_email')}}" />
+                        <input type="email" name="project_lead_email" class="form-control" value="{{old('project_lead_email')}}" required />
                           @if ($errors->has('project_lead_email'))
                                 <p class="error">{{ $errors->first('project_lead_email') }}</p>
                         @endif
@@ -215,7 +215,7 @@
 
                     <div class="form-group">
                         <label for="logo">Upload a PNG version of your organisation's logo</label><br />
-                        <input type="file" name="logo" accept=".png" />
+                        <input type="file" name="logo" accept=".png" required />
                           @if ($errors->has('logo'))
                                 <p class="error">{{ $errors->first('logo') }}</p>
                         @endif

@@ -14,6 +14,7 @@ class UserController extends Controller
     {
     	
     	$user = User::create($request->all());
+        
     	# code...
     	$file = $request->file('logo');
     	// $ext = 
