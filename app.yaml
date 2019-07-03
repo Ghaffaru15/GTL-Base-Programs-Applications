@@ -1,5 +1,11 @@
-runtime: php
-env: flex
+runtime: php72
 
-runtime_config:
-  document_root: web
+env_variables:
+   APP_KEY: base64:RYmqSOwWsNMz5/IvpPeT9PLbYlleBfwvlZJBN0HBRuA=
+   APP_STORAGE: /tmp
+   CACHE_DRIVER: file
+   SESSION_DRIVER: file
+   DB_DATABASE: Gtl_portal
+   DB_USERNAME: root
+   DB_PASSWORD: gtlportal1@
+   DB_SOCKET: "/cloudsql/portal-245616:us-central1:gtlportal"
