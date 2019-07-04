@@ -15,7 +15,16 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$host = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$database = substr($url["path"], 1);
+
+
+
+    'default' => env('DB_CONNECTION', 'us-cdbr-iron-east-02.cleardb.net'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,15 +51,28 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
-
+//         'us-cdbr-iron-east-02.cleardb.net' => array(
+//             'driver' => 'mysql',
+//             'host' => $host,
+//             'database' => $database,
+//             'username' => $username,
+//             'password' => $password,
+//             'charset' => 'utf8',
+//             'collation' => 'utf8_unicode_ci',
+//             'prefix' => '',
+// ),
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'db4free.net'),
+            // 'host' => env('DB_HOST', 'db4free.net'),
+            'host' => $host,
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'gtlhub'),
-            'username' => env('DB_USERNAME', 'ghaffar'),
-            'password' => env('DB_PASSWORD', 'engineer'),
+            // 'database' => env('DB_DATABASE', 'gtlhub'),
+            // 'username' => env('DB_USERNAME', 'ghaffar'),
+            // 'password' => env('DB_PASSWORD', 'engineer'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
