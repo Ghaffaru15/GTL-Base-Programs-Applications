@@ -83,7 +83,7 @@ class UserController extends AdminController
         // $show->image('Logo','3.jpg');
         $show->logos('Logo')->as(function ($logos) use ($id) {
             // $html = asset('images/Ghanatechlab.jpg');
-                $html = asset('storage/hubs/logos/' . $id . '.png');
+                $html = asset('uploads/hubs/logos/' . $id . '.png');
             return $html;
 
         })->image();

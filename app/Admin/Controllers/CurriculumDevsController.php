@@ -48,7 +48,7 @@ class CurriculumDevsController extends AdminController
         $show->field('phone_number', 'Phone number');
         $show->proposals('Proposal')->as(function ($proposals) use ($id,$user) {
             // $html = asset('images/Ghanatechlab.jpg');
-                $html = asset('storage/curriculum/proposals/' . $id . '.' . $user->proposal);
+                $html = asset('uploads/curriculum/proposals/' . $id . '.' . $user->proposal);
             return $html;
 
         })->file('proposal');
