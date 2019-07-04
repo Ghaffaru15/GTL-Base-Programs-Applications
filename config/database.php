@@ -4,6 +4,12 @@ use Illuminate\Support\Str;
 
 return [
 
+    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$host = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$database = substr($url["path"], 1);
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -15,16 +21,11 @@ return [
     |
     */
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
 
 
 
-    'default' => env('DB_CONNECTION', 'us-cdbr-iron-east-02.cleardb.net'),
+
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -63,7 +64,7 @@ $database = substr($url["path"], 1);
 // ),
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
+            // 'url' => env('DATABASE_URL'),
             // 'host' => env('DB_HOST', 'db4free.net'),
             'host' => $host,
             'database' => $database,
