@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\CurriculumDev;
+use Illuminate\Support\Facades\Storage;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -48,7 +49,8 @@ class CurriculumDevsController extends AdminController
         $show->field('phone_number', 'Phone number');
         $show->proposals('Proposal')->as(function ($proposals) use ($id,$user) {
             // $html = asset('images/Ghanatechlab.jpg');
-                $html = asset('uploads/curriculum/proposals/' . $id . '.' . $user->proposal);
+                $html = Storage::disk('s3')->get('ai/curriculum/proposals/' . $id . '.' . $user->proposal);
+                // $html = asset('uploads/curriculum/proposals/' . $id . '.' . $user->proposal);
             return $html;
 
         })->file('proposal');

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\CurriculumDev;
 use App\Http\Requests\CurriculumDevRequest;
-
+use Illuminate\Support\Facades\Storage;
 class CurriculumDevsController extends Controller
 {
     //
@@ -21,7 +21,8 @@ class CurriculumDevsController extends Controller
     		'phone_number' => $request->phone_number,
     		'proposal' => $ext
     	]);
-    	$file->storeAs('curriculum/proposals', $user->id . '.' . $ext);
+    	// $file->storeAs('curriculum/proposals', $user->id . '.' . $ext);
+        Storage::disk('s3')->put('ai/curriculum/proposals/' . $user->id . '.' . $ext,$file);
 
     	session()->flash('message','Thank you for applying');
     	return redirect()->back();
