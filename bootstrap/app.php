@@ -40,7 +40,6 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
-$app->useStoragePath(env('APP_STORAGE', base_path() . '/storage'));
 /*
 |--------------------------------------------------------------------------
 | Return The Application
@@ -51,5 +50,6 @@ $app->useStoragePath(env('APP_STORAGE', base_path() . '/storage'));
 | from the actual running of the application and sending responses.
 |
 */
+$app->useStoragePath(env('APP_STORAGE', base_path() . '/storage'));
 
 return $app;

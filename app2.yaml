@@ -1,5 +1,6 @@
 runtime: php72
 
+
 runtime_config:
  document_root: public 
 
@@ -7,12 +8,10 @@ runtime_config:
  APP_TIMEZONE: UTC #your timezone of choice
 
 env_variables:
-   VIEW_COMPILED_PATH: /tmp
-   APP_ENV: production
    APP_KEY: base64:RYmqSOwWsNMz5/IvpPeT9PLbYlleBfwvlZJBN0HBRuA=
-   APP_STORAGE: /tmp
-   
-   SESSION_DRIVER: cookie
+   # APP_STORAGE: /tmp
+   CACHE_DRIVER: database
+   SESSION_DRIVER: database
    DB_DATABASE: Gtl_portal
    DB_USERNAME: root
    DB_PASSWORD: gtlportal1@
