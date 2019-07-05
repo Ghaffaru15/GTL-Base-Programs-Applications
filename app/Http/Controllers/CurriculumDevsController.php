@@ -22,7 +22,7 @@ class CurriculumDevsController extends Controller
     		'proposal' => $ext
     	]);
     	// $file->storeAs('curriculum/proposals', $user->id . '.' . $ext);
-        Storage::disk('s3')->put('ai/curriculum/proposals/' . $user->id . '.' . $ext,$file);
+        Storage::disk('s3')->put('ai/curriculum/proposals/' . $user->id . '.' . $ext,file_get_contents($file));
 
     	session()->flash('message','Thank you for applying');
     	return redirect()->back();
