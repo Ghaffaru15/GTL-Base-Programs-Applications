@@ -84,7 +84,7 @@ class UserController extends AdminController
         // $show->image('Logo','3.jpg');
         $show->logos('Logo')->as(function ($logos) use ($id) {
             // $html = asset('images/Ghanatechlab.jpg');
-                $html =  Storage::disk('s3')->get('https://gtlportal.s3.us-east-2.amazonaws.com/ai/hubs/logos/' . $id . '.png');
+                $html =  Storage::disk('s3')->url('https://gtlportal.s3.us-east-2.amazonaws.com/ai/hubs/logos/' . $id . '.png');
                 // $html = asset('uploads/hubs/logos/' . $id . '.png');
             return $html;
 
