@@ -49,7 +49,7 @@ class CurriculumDevsController extends AdminController
         $show->field('phone_number', 'Phone number');
         $show->proposals('Proposal')->as(function ($proposals) use ($id,$user) {
             // $html = asset('images/Ghanatechlab.jpg');
-                $html = Storage::disk('s3')->get('https://gtlbaseprograms.s3.us-east-2.amazonaws.com/ai/curriculum/proposals/' . $id . '.' . $user->proposal);
+                $html = Storage::disk('s3')->url('/ai/curriculum/proposals/' . $id . '.' . $user->proposal);
                 // $html = asset('uploads/curriculum/proposals/' . $id . '.' . $user->proposal);
             return $html;
 
