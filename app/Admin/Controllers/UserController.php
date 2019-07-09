@@ -32,21 +32,7 @@ class UserController extends AdminController
        
         $grid->column('project_lead_name','Name of Project Lead');
         $grid->column('project_lead_phone_number','Telephone Number');
-         // $grid->column('application_registered', __('Application Registered ?'));
-        // $grid->column('logo','Organisation Logo');
-        // $grid->column('training_room','Training room available ?');
-        // $grid->column('laptops','20 Laptops available ?');
-        // $grid->column('committed','Committed to running AI Training ?');
-        // $grid->column('incubation','Committed to running incubation ?');
-        // $grid->column('internship_provision','Can provide internship places ?');
-        // $grid->column('internship_places','Internship places');
-        // $grid->column('reports','Can provide reports ?');
-        // $grid->column('provide_trainers','Can provide 2 trainers ?');
-        // $grid->column('business_lead','Can provide development lead');
-        // $grid->column('email_verified_at', __('Email verified at'));
-        // $grid->column('password', __('Password'));
-        // $grid->column('remember_token', __('Remember token'));
-        // $grid->column('residence', __('Residence'));
+ 
         $grid->column('created_at', __('Created at'));
         // $grid->column('updated_at', __('Updated at'));
         // $grid->id('id')->sortable();
@@ -101,18 +87,7 @@ class UserController extends AdminController
         $show->field('provide_trainers','Can provide 2 trainers skilled in AI ?');
         $show->field('business_lead','Can provide business development lead for 2 months incubation program?');
 
-        // $show->field('name', __('Name'));
-        // $show->field('email', __('Email'));
-        // // $show->field('email_verified_at', __('Email verified at'));
-        // // $show->field('password', __('Password'));
-        // // $show->field('remember_token', __('Remember token'));
-        // $show->field('residence', __('Residence'));
-        // $show->field('region', __('Region'));
-        // $show->field('question', __('Question'));
-        // $show->field('sex', __('Sex'));
-        // $show->field('approved', __('Approved'));
-        // $show->field('created_at', __('Created at'));
-        // $show->field('updated_at', __('Updated at'));
+  
 
         return $show;
     }
