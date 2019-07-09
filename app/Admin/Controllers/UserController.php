@@ -83,7 +83,7 @@ class UserController extends AdminController
         $show->field('project_lead_email','Email address of Project Lead');
         // $show->image('Logo','3.jpg');
         $show->logos('Logo')->as(function ($logos) use ($id) {
-            // $html = asset('images/Ghanatechlab.jpg');
+            //  $html = asset('images/Ghanatechlab.jpg');
                 $html =  Storage::disk('s3')->url('/ai/hubs/logos/' . $id . '.png');
             // $html = Storage::disk('s3')->url('https://gtlportal.s3.us-east-2.amazonaws.com/ai/hubs/logos/2.png/xgigv8TnoEQY0jZk6jd4Od2CZPLHTleIc4XDr7ju.png');
                 // $html = asset('uploads/hubs/logos/' . $id . '.png');
