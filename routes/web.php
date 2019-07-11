@@ -11,16 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-// Route::post('/ai/hubs','UserController@store');
- Route::post('/ai/hubs','UserController@store');
+Route::post('/ai/hubs','UserController@store');
 
 
-Route::get('/cur-devs',function(){
-	return view('cur-devs');
-});
+// Route::get('/cur-devs',function(){
+// 	return view('cur-devs');
+// });
 
 Route::post('/ai/cur','CurriculumDevsController@store');
