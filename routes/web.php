@@ -17,7 +17,10 @@
 
 Route::post('/ai/hubs','UserController@store');
 
-
+Route::post('/stakeholder-meeting','StakeholderMeetingController@store');
+Route::get('/stakeholder-meeting', function(){
+    return view('stakeholder-meeting');
+});
 // Route::get('/cur-devs',function(){
 // 	return view('cur-devs');
 // });
