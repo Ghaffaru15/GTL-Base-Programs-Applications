@@ -30,6 +30,8 @@ class StakeholderController extends AdminController
         $grid->column('name', __('Name'));
         $grid->column('company', __('Company'));
         $grid->column('designation', __('Designation'));
+        $grid->column('email', __('Email'));
+        $grid->column('contact', __('Contact'));
         // $grid->column('contact', __('Contact'));
         // $grid->column('email', __('Email'));
         // $grid->column('created_at', __('Created at'));
