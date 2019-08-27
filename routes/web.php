@@ -22,3 +22,9 @@ Route::get('/cur-devs',function(){
 });
 
 Route::post('/ai/cur','CurriculumDevsController@store');
+
+Route::post('/national-pitch','NationalPitchController@store');
+
+Route::get('/national-pitch',function(){
+    return view('national-pitch');
+});

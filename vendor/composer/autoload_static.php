@@ -467,6 +467,7 @@ class ComposerStaticInitd34d7b2350631e24675ae1860c7f306b
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\CurriculumDevRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CurriculumDevRequest.php',
         'App\\Http\\Requests\\HubApplicationRequest' => __DIR__ . '/../..' . '/app/Http/Requests/HubApplicationRequest.php',
+        'App\\NationalPitch' => __DIR__ . '/../..' . '/app/NationalPitch.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

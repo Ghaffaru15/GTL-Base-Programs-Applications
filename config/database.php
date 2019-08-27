@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Str;
 
-
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $host = $url["host"];
@@ -52,7 +51,7 @@ return [
             'url' => env('DATABASE_URL'),
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
-            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', false),
         ],
 //         'us-cdbr-iron-east-02.cleardb.net' => array(
 //             'driver' => 'mysql',
@@ -73,9 +72,11 @@ return [
             'username' => $username,
             'password' => $password,
             'port' => env('DB_PORT', '3306'),
+
             // 'database' => env('DB_DATABASE', 'gtlhub'),
             // 'username' => env('DB_USERNAME', 'ghaffar'),
             // 'password' => env('DB_PASSWORD', 'engineer'),
+
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',

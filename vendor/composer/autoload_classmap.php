@@ -32,6 +32,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\CurriculumDevRequest' => $baseDir . '/app/Http/Requests/CurriculumDevRequest.php',
     'App\\Http\\Requests\\HubApplicationRequest' => $baseDir . '/app/Http/Requests/HubApplicationRequest.php',
+    'App\\NationalPitch' => $baseDir . '/app/NationalPitch.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
