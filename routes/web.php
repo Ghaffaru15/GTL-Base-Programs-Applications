@@ -17,9 +17,13 @@ Route::get('/', function () {
 
 Route::post('/ai/hubs','UserController@store');
 
-Route::get('/cur-devs',function(){
-	return view('cur-devs');
+Route::post('/stakeholder-meeting','StakeholderMeetingController@store');
+Route::get('/stakeholder-meeting', function(){
+    return view('stakeholder-meeting');
 });
+// Route::get('/cur-devs',function(){
+// 	return view('cur-devs');
+// });
 
 Route::post('/ai/cur','CurriculumDevsController@store');
 

@@ -11,7 +11,7 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('admin.home');
-    $router->resource('/ai/hubs', UserController::class);
+    $router->resource('/ai/hubs', HubController::class);
     $router->resource('/ai/cur', CurriculumDevsController::class);
-
+    $router->resource('/ai/stakeholder',StakeholderController::class);
 });
