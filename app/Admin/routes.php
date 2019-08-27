@@ -14,5 +14,5 @@ Route::group([
     $router->resource('/ai/hubs', HubController::class);
     $router->resource('/ai/cur', CurriculumDevsController::class);
     $router->resource('/ai/stakeholder',StakeholderController::class);
-    $routeer->resource('/national-pitch',NationalPitchController::class);
+    $router->resource('/national-pitch',NationalPitchController::class);
 });
