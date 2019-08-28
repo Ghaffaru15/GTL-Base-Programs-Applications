@@ -27,8 +27,7 @@ class NationalPitchController extends AdminController
     {
         $grid = new Grid(new NationalPitch);
         $grid->column('name',__('Name of Organisation/Consultant'));
-        $grid->column('company',__('Email address'));
-        $grid->column('company',__('Company'));
+        $grid->column('company',__('Company/Organisation'));
         $grid->column('designation',__('Designation'));
         $grid->column('contact',__('Contact'));
         $grid->column('email', __('Email'));
