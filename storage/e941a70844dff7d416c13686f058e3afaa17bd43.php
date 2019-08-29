@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>National Pitch Summit</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -14,7 +14,7 @@
         <style>
             html, body {
                 /*background-color: orange;*/
-                background-image: url('images/New des.png');
+                background-image: url('images/PORTAL.jpg');
                 /*color: #636b6f;*/
                 font-family: 'Nunito', sans-serif;
                 font-weight: 600;
@@ -128,7 +128,7 @@
               <img src="/images/Ghanatechlab.jpg" width="100px" height="100px"><hr>
           </div>
           <div class="col-md-6">
-              <h2 style="text-align: center; margin-top: 50px; font-weight: 600; color:white"> Welcome to the National Investment Pitch Summit</h2>
+              <h2 style="text-align: center; margin-top: 50px; font-weight: 600; color:white"> Welcome to the National Startup Investment Pitch Summit</h2>
             </div>
             <div class="col-md-3"></div>
           </div>
