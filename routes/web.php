@@ -32,3 +32,8 @@ Route::post('/national-pitch','NationalPitchController@store');
 Route::get('/national-pitch',function(){
     return view('national-pitch');
 });
+
+Route::get('/ai/national-pitch', function() {
+    return view('ai-national-pitch');
+});
+Route::post('/ai/national-pitch','NationalPitchController@ai');

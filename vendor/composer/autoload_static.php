@@ -449,6 +449,7 @@ class ComposerStaticInitd34d7b2350631e24675ae1860c7f306b
         'App\\Admin\\Controllers\\NationalPitchController' => __DIR__ . '/../..' . '/app/Admin/Controllers/NationalPitchController.php',
         'App\\Admin\\Controllers\\StakeholderController' => __DIR__ . '/../..' . '/app/Admin/Controllers/StakeholderController.php',
         'App\\Admin\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Admin/Controllers/UserController.php',
+        'App\\AiNationalPitch' => __DIR__ . '/../..' . '/app/AiNationalPitch.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\CurriculumDev' => __DIR__ . '/../..' . '/app/CurriculumDev.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',

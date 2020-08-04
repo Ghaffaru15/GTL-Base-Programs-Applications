@@ -15,4 +15,11 @@ class NationalPitchController extends Controller
         session()->flash('message','Thank you for coming');
         return redirect()->back();
     }
+
+    public function ai(NationalPitchRequest $request)
+    {
+        $data = AiNationalPitch::create($request->all());
+        session()->flash('message','Thank you for coming');
+        return redirect()->back();
+    }
 }

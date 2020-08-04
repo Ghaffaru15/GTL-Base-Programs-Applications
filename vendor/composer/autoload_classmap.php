@@ -14,6 +14,7 @@ return array(
     'App\\Admin\\Controllers\\NationalPitchController' => $baseDir . '/app/Admin/Controllers/NationalPitchController.php',
     'App\\Admin\\Controllers\\StakeholderController' => $baseDir . '/app/Admin/Controllers/StakeholderController.php',
     'App\\Admin\\Controllers\\UserController' => $baseDir . '/app/Admin/Controllers/UserController.php',
+    'App\\AiNationalPitch' => $baseDir . '/app/AiNationalPitch.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\CurriculumDev' => $baseDir . '/app/CurriculumDev.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
